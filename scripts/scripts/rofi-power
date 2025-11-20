@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Opções do menu
+options="⏻ Shutdown\n Restart\n Suspend\n⏾ Hibernate\n Lock\n Logout\n Cancel"
+
+chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power" -theme ~/.config/rofi/arc-dark-power.rasi)"
+
+case "$chosen" in
+    "⏻ Shutdown")
+        systemctl poweroff
+        ;;
+    " Restart")
+        systemctl reboot
+        ;;
+    " Suspend")
+        systemctl suspend
+        ;;
+    "⏾ Hibernate")
+        systemctl hibernate
+        ;;
+    " Lock")
+        # ajuste o comando de lock para o que você usa
+        i3lock -c 000000
+        ;;
+    " Logout")
+        i3-msg exit
+        ;;
+    *)
+        # Cancelar ou fechar o rofi sem escolher nada
+        exit 0
+        ;;
+esac
+

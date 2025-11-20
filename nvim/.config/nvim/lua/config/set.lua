@@ -34,6 +34,6 @@ vim.g.mapleader = " "
 
 -- Diagnostic display inline
 vim.diagnostic.config({
-	virtual_text = true,
-	--underline = true
+  virtual_text = true,
+  --underline = true
 })
