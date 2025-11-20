@@ -105,7 +105,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+t split h
+bindsym $mod+z split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -115,8 +115,8 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+e layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -245,8 +245,8 @@ bar {
 	}
 }
 
-bindsym $mod+shift+x exec i3lock -c  1a1a1a
-
+#$bindsym $mod+shift+x exec i3lock -c  1a1a1a
+bindsym $mod+shift+x exec --no-startup-id ~/scripts/lock-blur
 #interactive screenshot by pressing printscreen
 bindsym Print exec gnome-screenshot -i 
 #crop-area screenshot by pressing Mod + printscreen

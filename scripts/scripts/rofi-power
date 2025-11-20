@@ -20,7 +20,7 @@ case "$chosen" in
         ;;
     " Lock")
         # ajuste o comando de lock para o que você usa
-        i3lock -c 000000
+        ~/scripts/lock-blur
         ;;
     " Logout")
         i3-msg exit
