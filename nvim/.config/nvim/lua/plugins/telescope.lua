@@ -9,9 +9,18 @@ return {
   },
 
   config = function()
-    require("telescope").setup({})
-
+    local telescope = require("telescope")
     local builtin = require("telescope.builtin")
+    pcall(telescope.load_extension, "fzf")
+
+    require("telescope").setup {
+      pickers = {
+        find_files = {
+          hidden = true, -- se quiser incluir arquivos ocultos
+        },
+      }
+    }
+
     vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
     vim.keymap.set("n", "<C-p>", builtin.git_files, {})
     vim.keymap.set("n", "<leader>cv", function()

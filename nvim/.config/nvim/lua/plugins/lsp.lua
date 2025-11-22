@@ -12,6 +12,7 @@ return {
         eslint = {},
         tailwindcss = {},
         phpactor = {},
+        gopls = {},
       },
     },
     config = function(_, opts)
@@ -40,7 +41,7 @@ return {
         end,
       })
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "eslint", "ts_ls" },
+        ensure_installed = { "lua_ls", "eslint", "ts_ls", "gopls" },
       })
 
       for server, config in pairs(opts.servers) do
