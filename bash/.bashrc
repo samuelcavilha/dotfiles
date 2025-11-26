@@ -14,6 +14,7 @@ source ~/.local/share/omarchy/default/bash/rc
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 export PATH="$PATH:$HOME/scripts"
+export PATH=$PATH:/usr/local/go/bin
 
 bind -x '"\C-f":"tmux-sessionizer.sh"'
 
