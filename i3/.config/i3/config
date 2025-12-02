@@ -66,7 +66,7 @@ bindsym $mod+Return exec gnome-terminal
 # bindsym $mod+Return exec ghostty 
 
 #start thunar
-bindsym $mod+Shift+f exec thunar
+bindsym $mod+Shift+f exec nautilus
 
 # kill focused window
 bindsym $mod+w kill
@@ -216,6 +216,7 @@ workspace $ws2 output eDP-1
 workspace $ws4 output HDMI-1
 workspace $ws6 output HDMI-1
 workspace $ws9 output eDP-1
+workspace $ws8 output eDP-1
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -262,7 +263,7 @@ exec compton
 # Assign programs to workspaces : command: xprop
 assign [class="Spotify"] $ws9
 assign [class="TelegramDesktop"] $ws5
-assign [class="pgadmin4"] $ws8
+assign [class="Heidisql"] $ws8
 
 # Autostart configs
 exec_always feh --bg-fill --zoom fill  /home/samuel/Pictures/omarchy_bg
