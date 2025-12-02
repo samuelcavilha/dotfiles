@@ -5,6 +5,8 @@
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 
+source ~/.bash_aliases
+
 # Add your own exports, aliases, and functions here.
 #
 # Make an alias for invoking commands you use constantly
@@ -22,6 +24,10 @@ bind -x '"\C-f":"tmux-sessionizer"'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias fv='nvim $(fzf --preview="bat --color=always {}")'
 alias nv='nvim .'
+
+
+# Alias para iniciar o daemon do tablet wacom 
+alias tablet='otd-daemon'
 
 if command -v fzf &> /dev/null; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
