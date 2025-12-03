@@ -15,11 +15,13 @@ source ~/.local/share/omarchy/default/bash/rc
 
 export PATH="$PATH:$HOME/scripts"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 
-bind -x '"\C-f":"tmux-sessionizer.sh"'
+bind -x '"\C-f":"tmux-sessionizer"'
 
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias fv='nvim $(fzf --preview="bat --color=always {}")'
+alias nv='nvim .'
 
 if command -v fzf &> /dev/null; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
