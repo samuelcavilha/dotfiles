@@ -13,16 +13,16 @@ return {
     local builtin = require("telescope.builtin")
     pcall(telescope.load_extension, "fzf")
 
-    require("telescope").setup {
+    require("telescope").setup({
       pickers = {
         find_files = {
           hidden = true, -- se quiser incluir arquivos ocultos
         },
-      }
-    }
+      },
+    })
 
     vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
-    vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+    vim.keymap.set("n", "<leader>git", builtin.git_files, {})
     vim.keymap.set("n", "<leader>cv", function()
       require("telescope.builtin").find_files({
         cwd = vim.fn.stdpath("config"),

@@ -1,7 +1,6 @@
 require("config.set")
 require("config.remap")
 require("config.lazy")
-require("config.harpoon")
 
 vim.cmd([[
   highlight LineNr guifg=#C0CAF5

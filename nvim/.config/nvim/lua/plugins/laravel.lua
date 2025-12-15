@@ -16,6 +16,19 @@ return {
         desc = "Laravel: Open Laravel Picker",
       },
       {
+        "<leader>gf",
+        function()
+          local laravel = require("laravel")
+
+          if laravel.app("gf").cursorOnResource() then
+            laravel.commands.run("gf")
+          else
+            vim.notify("Cursor não está sobre um resource Laravel", vim.log.levels.INFO)
+          end
+        end,
+        desc = "Laravel: go to file",
+      },
+      {
         "<c-g>",
         function()
           Laravel.commands.run("view:finder")
@@ -99,7 +112,7 @@ return {
     opts = {
       features = {
         pickers = {
-          provider = "snacks", -- "snacks | telescope | fzf-lua | ui-select"
+          provider = "telescope", -- "snacks | telescope | fzf-lua | ui-select"
         },
       },
     },

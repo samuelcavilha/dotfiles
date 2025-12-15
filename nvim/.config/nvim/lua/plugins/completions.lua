@@ -10,9 +10,15 @@ return {
         per_filetype = {
           sql = { "snippets", "dadbod", "buffer" },
         },
-        -- add vim-dadbod-completion to your completion providers
         providers = {
           dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+          laravel = { name = "laravel", module = "blink.compat.source", score_offset = 95 },
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            -- make lazydev completions top priority (see `:h blink.cmp`)
+            score_offset = 100,
+          },
         },
       },
       keymap = {
