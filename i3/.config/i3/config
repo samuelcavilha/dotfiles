@@ -68,6 +68,9 @@ bindsym $mod+Return exec gnome-terminal
 #start thunar
 bindsym $mod+Shift+f exec nautilus
 
+#start diodon
+bindsym $mod+v exec diodon
+
 # kill focused window
 bindsym $mod+w kill
 
@@ -110,7 +113,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+z split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Shift+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
