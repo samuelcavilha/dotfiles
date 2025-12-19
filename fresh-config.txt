@@ -1,0 +1,14 @@
+install
+- git
+- fzf
+- fd-find
+- nvim: https://neovim.io/doc2/install/
+- stow
+- rofi: https://github.com/adi1090x/rofi?tab=readme-ov-file
+- font: https://www.nerdfonts.com/font-downloads - Jetbrains Mono
+- volume icon for i3: sudo apt-get install pavucontrol
+- oh-my-bash
+    - terminal theme
+- go
+- php
+- feh

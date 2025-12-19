@@ -3,13 +3,18 @@ case $- in
   *i*) ;;
     *) return;;
 esac
+export PATH="$HOME/.fzf/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin"
 
 # Path to your oh-my-bash installation.
 export OSH='/home/samuel/.oh-my-bash'
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="font"
+OSH_THEME="robbyrussell"
+# OSH_THEME="powerline"
+# OSH_THEME="font"
 # OSH_THEME="agnoster"
 
 # If you set OSH_THEME to "random", you can ignore themes you don't like.
@@ -163,3 +168,9 @@ source "$OSH"/oh-my-bash.sh
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
