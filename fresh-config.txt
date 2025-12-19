@@ -12,3 +12,5 @@ install
 - go
 - php
 - feh
+- sudo apt install gh
+    - sudo gh auth login
