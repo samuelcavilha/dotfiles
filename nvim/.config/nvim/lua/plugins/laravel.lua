@@ -108,7 +108,8 @@ return {
         noremap = true,
       },
     },
-    event = { "VeryLazy" },
+    ft = { "php", "blade" },
+    event = { "BufEnter composer.json" },
     opts = {
       features = {
         pickers = {
@@ -116,5 +117,26 @@ return {
         },
       },
     },
+    config = function(_, opts)
+      require("laravel").setup(opts)
+
+      -- Configurar gf para funcionar com namespaces PHP
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "php", "blade" },
+        callback = function()
+          -- Adicionar extensão .php automaticamente
+          vim.opt_local.suffixesadd:prepend(".php")
+
+          -- Converter namespace PHP para caminho de arquivo
+          vim.opt_local.includeexpr = [[substitute(v:fname, '\\', '/', 'g')]]
+
+          -- Adicionar diretórios comuns do Laravel ao path
+          vim.opt_local.path:append("app/**")
+          vim.opt_local.path:append("database/**")
+          vim.opt_local.path:append("resources/**")
+          vim.opt_local.path:append("routes/**")
+        end,
+      })
+    end,
   },
 }

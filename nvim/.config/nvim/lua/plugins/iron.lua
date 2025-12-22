@@ -1,6 +1,11 @@
-return
-{
+return {
   "hkupty/iron.nvim",
+  cmd = {
+    "IronRepl",
+    "IronRestart",
+    "IronFocus",
+    "IronHide",
+  },
   config = function()
     local iron = require("iron.core")
     local view = require("iron.view")
@@ -20,13 +25,13 @@ return
             --command = { "python3" }, -- or { "ipython", "--no-autoindent" }
             command = { "ipython", "--no-autoindent" }, -- or { "ipython", "--no-autoindent" }
             block_dividers = { "# %%", "#%%" },
-            env = { PYTHON_BASIC_REPL = "1" }           --this is needed for python3.13 and up.
-          }
+            env = { PYTHON_BASIC_REPL = "1" },          --this is needed for python3.13 and up.
+          },
         },
         -- How the repl window will be displayed
         -- See below for more information
         --repl_open_cmd = require("iron.view").right(60),
-        repl_open_cmd = "vertical split"
+        repl_open_cmd = "vertical split",
       },
       -- Iron doesn't set keymaps by default anymore.
       -- You can set them here or manually add keymaps to the functions in iron.core

@@ -6,16 +6,9 @@ return {
       globalstatus = true,
     },
     sections = {
-      lualine_c = { { "filename", file_status = true, path = 1, } },
-      -- lualine_x = {
-      --   {
-      --     require("lazy.status").updates,
-      --     cond = require("lazy.status").has_updates,
-      --     color = { fg = "#ff9e64" },
-      --   },
-      -- },
+      lualine_c = { { "filename", file_status = true, path = 1 } },
     },
-    lualine_x = { 'fileformat', 'filetype' },
+    lualine_x = { "fileformat", "filetype" },
     inactive_winbar = {
       lualine_c = { "filename" },
     },
